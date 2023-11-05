@@ -1,0 +1,5 @@
+수온
+https://www.badatime.com/temp_past.jsp?idx=158&param=DT_0001&date1=2022-07
+
+기온
+https://data.kma.go.kr/stcs/grnd/grndTaList.do?pgmNo=70

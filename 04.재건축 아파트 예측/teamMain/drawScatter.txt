@@ -1,0 +1,33 @@
+'''
+    주의 :
+    이 프로그램은 제공 또는 서비스 목적이 아니며 외부 용도로 사용할 수 없음.
+    이 프로그램을 외부에 공유 하거나 전달 할 수 없으며
+    기타 라이선스 및 각종 정보가 확인 되지 않은 소스코드임.
+
+    오직 공부 목적으로 사용함.
+'''
+
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+
+fe = fm.FontEntry(fname=r'/notebooks/Databases/Fonts/NanumGothic.ttf',name='NanumGothic')
+fm.fontManager.ttflist.insert(0, fe)
+plt.rcParams.update({'font.size': 12, 'font.family': 'NanumGothic'})
+
+import matplotlib.pyplot as plt
+def drawScatter(df,xDstColumnName,yDstColumnName, itemNameColumn):
+    labels=[]
+    values=[]
+    
+    fig = plt.figure()
+    ax = fig.add_subplot(1,1,1)
+    ax.scatter(df[xDstColumnName],df[yDstColumnName])   
+    print(df[yDstColumnName])
+    for x in df.iloc:
+        ax.text(x[xDstColumnName],x[yDstColumnName],x[itemNameColumn],fontsize=10,color="#4343FF")   
+    
+    
+    return ax
+
+
+drawScatter(df[0:100],"학교수","버스수","아파트명")

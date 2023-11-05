@@ -1,0 +1,37 @@
+'''
+    주의 :
+    이 프로그램은 제공 또는 서비스 목적이 아니며 외부 용도로 사용할 수 없음.
+    이 프로그램을 외부에 공유 하거나 전달 할 수 없으며
+    기타 라이선스 및 각종 정보가 확인 되지 않은 소스코드임.
+
+    오직 공부 목적으로 사용함.
+'''
+
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+
+fe = fm.FontEntry(fname=r'/notebooks/Databases/Fonts/NanumGothic.ttf',name='NanumGothic')
+fm.fontManager.ttflist.insert(0, fe)
+plt.rcParams.update({'font.size':12, 'font.family': 'NanumGothic'})
+
+
+def drawPIE(df,rangeColumnName, ranges,dstColumnName):
+    labels=[]
+    values=[]
+    for x in ranges:
+        bol= df[(df[rangeColumnName]>=x[1][0]) & (df[rangeColumnName]<=x[1][1])]
+        labels.append(x[0])
+        values.append(bol[dstColumnName].sum())
+        
+    print(labels)
+    print(values)
+    
+    fig = plt.figure()
+    ax = fig.add_subplot(1,1,1)
+    ax.pie(values,labels=labels)
+    
+    
+    return ax
+
+
+drawPIE(df,"스코어",[[0,(0,1000)],["test",(1000,2000)]],"학교수")
