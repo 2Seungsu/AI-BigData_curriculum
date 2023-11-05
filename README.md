@@ -1,4 +1,4 @@
-# 🔹 myProject to __AI-BigDataAnalyst__ 🔹
+# 🔹 myProject to __AI-BigData Analyst__ 🔹
 
  
 ----------------------------------------------------------
