@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+    /* 배경 */    
+    body {
+        background-image: url('../static/img/팀선택.gif');
+        background-size: cover;
+        background-repeat: repeat;
+        background-attachment: fixed;
+    }
+
+    /* 클릭 배너 */
+    .predict1 {
+            
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position:  absolute;  
+            opacity: 0;
+            top: 60px;
+            left: 0px; 
+            position: fixed
+        } 
+    .predict2 {            
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position:  absolute; 
+            opacity: 0;
+            left: 190px; 
+            top: 60px;
+            position: fixed
+        } 
+        .predict3 {            
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position:  absolute; 
+            opacity: 0;
+            left: 380px; 
+            top: 60px;
+            position: fixed
+        } 
+
+        .predict4 {            
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position:  absolute; 
+            opacity: 0;
+            left: 590px; 
+            top: 60px;
+            position: fixed
+        } 
+
+        .predict5 {            
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position:  absolute; 
+            opacity: 0;
+            left: 0px; 
+            top: 290px;
+            position: fixed
+        } 
+
+        .predict6 {            
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position:  absolute; 
+            opacity: 0;
+            left: 190px; 
+            top: 290px;
+            position: fixed
+        } 
+
+        .predict7 {            
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position:  absolute; 
+            opacity: 0;
+            left: 380px; 
+            top: 290px;
+            position: fixed
+        } 
+
+        .predict8 {            
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position:  absolute; 
+            opacity: 0;
+            left: 590px; 
+            top: 290px;
+            position: fixed
+        } 
+
+        .predict9 {            
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position:  absolute; 
+            opacity: 0;
+            left: 0px; 
+            top: 490px;
+            position: fixed
+        } 
+
+        .predict10 {            
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position:  absolute; 
+            opacity: 0;
+            left: 190px; 
+            top: 490px;
+            position: fixed
+        } 
+
+        .predict11 {            
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position:  absolute; 
+            opacity: 0;
+            left: 380px; 
+            top: 490px;
+            position: fixed
+        } 
+        .predict12 {            
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position:  absolute; 
+            opacity: 0;
+            left: 590px; 
+            top: 490px;
+            position: fixed
+        } 
+        .predict13 {            
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position:  absolute; 
+            opacity: 0;
+            left: 0px; 
+            top: 700px;
+            position: fixed
+        } 
+        .predict14 {            
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position:  absolute; 
+            opacity: 0;
+            left: 190px; 
+            top: 700px;
+            position: fixed
+        } 
+        .predict15 {            
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position:  absolute; 
+            opacity: 0;
+            left: 380px; 
+            top: 700px;
+            position: fixed
+        } 
+        .predict16 {            
+            margin: 0;
+            width: 200px;
+            height: 200px;
+            position:  absolute; 
+            opacity: 0;
+            left: 590px; 
+            top: 700px;
+            position: fixed
+        } 
+
+        
+    
+        .right_box{
+
+            display:none;
+            position: absolute;
+            right: 100px;
+            top: 300;
+            width: 800px;
+            height: 800px;
+
+        
+
+        }
+
+        .right_box.show{
+             display:inline-block;
+        }
+
+
+        .img_test_1{
+            position: absolute;
+
+            left:10px;
+            bottom:50px;
+            width: 800px; /* 원하는 너비로 조절 */
+            height: 720px; /* 원하는 높이로 조절 */
+        }
+        .img_test_2{
+            position: absolute;
+
+            left:120px;
+            bottom: 100px;
+            width: 600px; /* 원하는 너비로 조절 */
+            height: 600px; /* 원하는 높이로 조절 */
+
+        }
+        .img_test_3{
+            position: absolute;
+
+            left:120px;
+            bottom: 100px;
+            width: 600px; /* 원하는 너비로 조절 */
+            height: 600px; /* 원하는 높이로 조절 */
+        }
+        .img_test_4{
+            position: absolute;
+
+            left:50px;
+            bottom:10px;
+            width: 800px; /* 원하는 너비로 조절 */
+            height: 800px; /* 원하는 높이로 조절 */
+        }
+        .img_test_5{
+            position: absolute;
+
+            left:150px;
+            bottom:200px;
+            width: 500px; /* 원하는 너비로 조절 */
+            height: 400px; /* 원하는 높이로 조절 */
+        }
+        .img_test_6{
+            position: absolute;
+
+            left:150px;
+            bottom:200px;
+            width: 500px; /* 원하는 너비로 조절 */
+            height: 400px; /* 원하는 높이로 조절 */
+        }
+        .img_test_7{
+            position: absolute;
+
+            left:100px;
+            bottom:10px;
+            width: 650px; /* 원하는 너비로 조절 */
+            height: 700px; /* 원하는 높이로 조절 */
+        }
+        .img_test_8{
+            position: absolute;
+
+            left:120px;
+            bottom:150px;
+            width: 600px; /* 원하는 너비로 조절 */
+            height: 550px; /* 원하는 높이로 조절 */
+        }
+        .img_test_9{
+            position: absolute;
+
+            left:150px;
+            bottom:100px;
+            width: 600px; /* 원하는 너비로 조절 */
+            height: 600px; /* 원하는 높이로 조절 */
+        }
+        .img_test_10{
+            position: absolute;
+
+            left:120px;
+            bottom:100px;
+            width: 600px; /* 원하는 너비로 조절 */
+            height: 600px; /* 원하는 높이로 조절 */
+        }
+        .img_test_11{
+            position: absolute;
+
+            left:120px;
+            bottom:100px;
+            width: 600px; /* 원하는 너비로 조절 */
+            height: 600px; /* 원하는 높이로 조절 */
+        }
+        .img_test_12{
+            position: absolute;
+
+            left:100px;
+            bottom:100px;
+            width: 600px; /* 원하는 너비로 조절 */
+            height: 600px; /* 원하는 높이로 조절 */
+        }
+        .img_test_13{
+            position: absolute;
+
+            left:130px;
+            bottom:80px;
+            width: 600px; /* 원하는 너비로 조절 */
+            height: 600px; /* 원하는 높이로 조절 */
+        }
+        .img_test_14{
+            position: absolute;
+
+            left:150px;
+            bottom:150px;
+            width: 550px; /* 원하는 너비로 조절 */
+            height: 550px; /* 원하는 높이로 조절 */
+        }
+        .img_test_15{
+            position: absolute;
+
+            left:10px;
+            bottom:10px;
+            width: 800px; /* 원하는 너비로 조절 */
+            height: 800px; /* 원하는 높이로 조절 */
+        }
+        .img_test_16{
+            position: absolute;
+
+            left:120px;
+            bottom:100px;
+            width: 600px; /* 원하는 너비로 조절 */
+            height: 600px; /* 원하는 높이로 조절 */
+        }
+        
+
+        @font-face {
+            font-family: 'ImcreSoojin';                          /* 사용하고자 하는 폰트 이름 */
+            src: url('../static/css/ImcreSoojin.ttf') format('truetype'); /* 폰트 파일의 경로와 형식을 지정 */
+        }
+
+        .prediction-link {
+            text-align: center;
+            position: absolute;
+            bottom: 0px;
+            left: 33px;
+            right: 0;
+            font-family: 'ImcreSoojin', sans-serif;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            font-size: 40px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <a href="#" onclick="showButtonName(1)">
+        <img class ='predict1' src="../static/img/승부예측로고.png" alt="Gen.G eSports" >
+    </a>
+    <a href="#" onclick="showButtonName(2)">
+        <img class ='predict2' src="../static/img/승부예측로고.png" alt="JD Gaming" >
+    </a>
+    <a href="#" onclick="showButtonName(3)">
+        <img class ='predict3' src="../static/img/승부예측로고.png" alt="G2 Esports" >
+    </a>
+    <a href="#" onclick="showButtonName(4)">
+        <img class ='predict4' src="../static/img/승부예측로고.png" alt="NRG" >
+    </a>
+    <a href="#" onclick="showButtonName(5)">
+        <img class ='predict5' src="../static/img/승부예측로고.png" alt="T1" >
+    </a>
+    <a href="#" onclick="showButtonName(6)">
+        <img class ='predict6' src="../static/img/승부예측로고.png" alt="Bilibili Gaming" >
+    </a>
+    <a href="#" onclick="showButtonName(7)">
+        <img class ='predict7' src="../static/img/승부예측로고.png" alt="Fnatic"  >
+    </a>
+    <a href="#" onclick="showButtonName(8)">
+        <img class ='predict8' src="../static/img/승부예측로고.png" alt="Cloud9" >
+    </a>
+    <a href="#" onclick="showButtonName(9)">
+        <img class ='predict9' src="../static/img/승부예측로고.png" alt="KT Rolster" >
+    </a>
+    <a href="#" onclick="showButtonName(10)">
+        <img class ='predict10' src="../static/img/승부예측로고.png" alt="LNG Esports">
+    </a>
+    <a href="#" onclick="showButtonName(11)">
+        <img class ='predict11' src="../static/img/승부예측로고.png" alt="MAD Lions" >
+    </a>
+    <a href="#" onclick="showButtonName(12)">
+        <img class ='predict12' src="../static/img/승부예측로고.png" alt="Team Liquid">
+    </a>
+    <a href="#" onclick="showButtonName(13)">
+        <img class ='predict13' src="../static/img/승부예측로고.png" alt="Dplus KIA" >
+    </a>
+    <a href="#" onclick="showButtonName(14)">
+        <img class ='predict14' src="../static/img/승부예측로고.png" alt="Weibo Gaming">
+    </a>
+    <a href="#" onclick="showButtonName(15)">
+        <img class ='predict15' src="../static/img/승부예측로고.png" alt="Team BDS" >
+    </a>
+    <a href="#" onclick="showButtonName(16)">
+        <img class ='predict16' src="../static/img/승부예측로고.png" alt="GAM Esports" >
+    </a>
+
+
+    <script>
+        function redirectToPredictionPage(name) {
+            window.location.href = 'probal.html?name=' + name;
+        }
+        </script>
+
+    <div id="right_box_1" class="right_box">
+        
+        <img src='../static/img/젠지.png' class="img_test_1"></img>
+        <p class="prediction-link" onclick="redirectToPredictionPage('GenG')">승부예측 하러가기</p>
+    </div>
+    
+    <div id="right_box_2" class="right_box">
+
+        <img src='../static/img/징동.png' class="img_test_2"></img>
+        <p class="prediction-link" onclick="redirectToPredictionPage('JDG')">승부예측 하러가기</p>
+
+    </div>
+        
+    <div id="right_box_3" class="right_box">
+        <img src='../static/img/지투.png' class="img_test_3"></img>
+        <p class="prediction-link" onclick="redirectToPredictionPage('G2')">승부예측 하러가기</p>
+    </div>
+
+    <div id="right_box_4" class="right_box">
+        <img src='../static/img/앤알지.png' class="img_test_4"></img>
+        <p class="prediction-link" onclick="redirectToPredictionPage('NRG')">승부예측 하러가기</p>
+    </div>
+
+    <div id="right_box_5" class="right_box">
+        <img src='../static/img/티원.png' class="img_test_5"></img>
+        <p class="prediction-link" onclick="redirectToPredictionPage('T1')">승부예측 하러가기</p>
+    </div>
+
+    <div id="right_box_6" class="right_box">
+        <img src='../static/img/비앨지.png' class="img_test_6"></img>
+        <p class="prediction-link" onclick="redirectToPredictionPage('BLG')">승부예측 하러가기</p>
+    </div>
+
+    <div id="right_box_7" class="right_box">
+        <img src='../static/img/프나틱.png' class="img_test_7"></img>
+        <p class="prediction-link" onclick="redirectToPredictionPage('Fnatic')">승부예측 하러가기</p>
+    </div>
+
+    <div id="right_box_8" class="right_box">
+        <img src='../static/img/시나인.png' class="img_test_8"></img>
+        <p class="prediction-link" onclick="redirectToPredictionPage('Cloud9')">승부예측 하러가기</p>
+    </div>
+
+    <div id="right_box_9" class="right_box">
+        <img src='../static/img/케이티.png' class="img_test_9"></img>
+        <p class="prediction-link" onclick="redirectToPredictionPage('KT')">승부예측 하러가기</p>
+    </div>
+
+    <div id="right_box_10" class="right_box">
+        <img src='../static/img/앨앤지.png' class="img_test_10"></img>
+        <p class="prediction-link" onclick="redirectToPredictionPage('LNG')">승부예측 하러가기</p>
+    </div>
+
+    <div id="right_box_11" class="right_box">
+        <img src='../static/img/매드.png' class="img_test_11"></img>
+        <p class="prediction-link" onclick="redirectToPredictionPage('MAD')">승부예측 하러가기</p>
+    </div>
+
+    <div id="right_box_12" class="right_box">
+        <img src='../static/img/팀리퀴드.png' class="img_test_12"></img>
+        <p class="prediction-link" onclick="redirectToPredictionPage('TL')">승부예측 하러가기</p>
+    </div>
+
+    <div id="right_box_13" class="right_box">
+        <img src='../static/img/디플.png' class="img_test_13"></img>
+        <p class="prediction-link" onclick="redirectToPredictionPage('DK')">승부예측 하러가기</p>
+    </div>
+
+    <div id="right_box_14" class="right_box">
+        <img src='../static/img/웨이보.png' class="img_test_14"></img>
+        <p class="prediction-link" onclick="redirectToPredictionPage('Weibo')">승부예측 하러가기</p>
+    </div>
+
+    <div id="right_box_15" class="right_box">
+        <img src='../static/img/비디에스.png' class="img_test_15"></img>
+        <p class="prediction-link" onclick="redirectToPredictionPage('BDS')">승부예측 하러가기</p>
+    </div>
+
+    <div id="right_box_16" class="right_box">
+        <img src='../static/img/감.png' class="img_test_16"></img>
+        <p class="prediction-link" onclick="redirectToPredictionPage('GAM')">승부예측 하러가기</p>
+    </div>
+       
+    
+    <script>
+
+        function showButtonName(id){
+
+            
+            //document.getElementById('right_box_2').classList.remove('show');
+            //
+
+            for (let i=1;i<=16;i++){
+                
+                document.getElementById('right_box_' + i).classList.remove('show');
+            }
+
+            document.getElementById('right_box_' + id).classList.add('show');
+            document.getElementById()
+        }
+
+        
+    </script>
+
+
+
+
+</body>
+</html>
+

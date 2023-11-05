@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+    .body {   
+        width:100%;
+        height: 180vh;
+        margin: 0;
+        background: url('../static/img/우승.png');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    @font-face {
+            font-family: 'ImcreSoojin';                          /* 사용하고자 하는 폰트 이름 */
+            src: url('../static/css/ImcreSoojin.ttf') format('truetype'); /* 폰트 파일의 경로와 형식을 지정 */
+        }
+
+    .winrate{
+        left: 650px;
+        width: 280px;
+        height: 100px;
+        position: relative;
+        font-family: 'ImcreSoojin', sans-serif;
+        color:black;
+        font-size: 60px;
+        text-align: center;
+
+    }
+    .prob{
+        position: relative;
+        top: -60px; 
+        left: 1200px;
+        width: 300px;
+        height: 200px;
+        font-family: 'ImcreSoojin', sans-serif;
+        color:black;
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .team{
+        position: relative;
+        left: 40px;
+        top: 330px;
+        width: 300px;
+        height: 100px;
+        font-family: 'ImcreSoojin', sans-serif;
+        font-weight: bold;
+        color: rgb(50, 50, 50);
+        font-size: 120px;
+        text-align: center;
+    }
+
+    .miracle{
+        position: relative;
+        left: 30px;
+        top: 50px;
+        width: 400px;
+        height: 100px;
+        font-family: 'ImcreSoojin', sans-serif;
+        font-weight: bold;
+        color: rgb(50, 50, 50);
+        font-size: 60px;
+        text-align: center;
+    }
+
+
+    .champion{
+        position: relative;
+        left: 30px;
+        top: -200px;
+        width: 400px;
+        height: 100px;
+        font-family: 'ImcreSoojin', sans-serif;
+        font-weight: bold;
+        color: rgb(50, 50, 50);
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .winTeam{
+        left: 650px;
+        width: 650px;
+        height: 600px;
+        top: -156px;
+        position: relative;
+        font-family: 'ImcreSoojin', sans-serif;
+        color:darkblue;
+        font-size: 25px;
+        text-align: left;
+        line-height: 1.6;
+
+    }
+    .probTeam{
+        position: relative;
+        top: -630px; 
+        left: 1250px;
+        width: 100px;
+        height: 100px;
+        font-family: 'ImcreSoojin', sans-serif;
+        color: darkblue;
+        font-size: 90px;
+        text-align: center;
+    }
+
+    .probChampion{
+        position: relative;
+        top: -415px; 
+        left: 750px;
+        width: 200px;
+        height: 200px;
+        font-family: 'ImcreSoojin', sans-serif;
+        color: darkblue;
+        font-size: 75px;
+        text-align: center;
+    }
+    .probMiracle{
+        position: relative;
+        top: -300px; 
+        left: 750px;
+        width: 200px;
+        height: 200px;
+        font-family: 'ImcreSoojin', sans-serif;
+        color: darkblue;
+        font-size: 75px;
+        text-align: center;
+    }
+    
+    
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <div class="team"><strong>{{ button_name }}</strong></div>        
+        <div class="winrate">상대팀별 승률 </div>
+        <div class="prob">우승 확률</div>
+
+        <div class="winTeam">{% for i in win_team %}
+            <br>{{ i }}
+                                {% endfor %}</div>
+        <div class="probTeam"> {{ prob_team }}</div>
+
+        <div class="champion"><strong>예상 우승팀</strong></div>
+        <div class="miracle"><strong>올해의 중꺾마</strong></div>        
+        
+
+        <div class="probChampion">{{ champion }}</div>        
+        <div class="probMiracle">{% for i in miracle %}
+                                {{ i }}<br>
+                                {% endfor %}</div>
+        
+    
+     
+
+    </div>
+
+
+</body>
+
+
+</html>
